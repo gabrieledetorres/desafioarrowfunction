@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class exercicio extends React.Component {
+  
+  msg = () => {
+    return(
+      <div>
+        <p>Insira uma frase aqui</p>
+      </div>
+    )
+  }
+
+  numero = (numero1) => {
+    return (
+      <div>
+        <p>{numero1*2}</p>
+      </div>
+    )
+  }
+  render() {
+    return (
+      <div>
+        <h1>{this.msg()}</h1>
+        <p>{this.numero(18)}</p>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default exercicio;
